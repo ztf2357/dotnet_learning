@@ -15,17 +15,17 @@ namespace DesignPattern.Observer.Classic
     public class ConcreteObserver : Observer
     {
         private int _state;
-        private ConcreteSubject _concreteSubject;
+        private Subject _subject;
 
-        public ConcreteObserver(ConcreteSubject concreteSubject)
+        public ConcreteObserver(Subject subject)
         {
-            this._concreteSubject = concreteSubject;
+            this._subject = subject;
         }
 
         public override void Update()
         {
-            _state = _concreteSubject.SubjectState;
-            Debug.WriteLine("状态被修改了");
+            _state = _subject.SubjectState;
+            Debug.WriteLine($"状态被修改为{_state}");
         }
     }
 }

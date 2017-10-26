@@ -13,9 +13,11 @@ namespace Test.DesignPattern
         [Fact]
         public void ClassicTest()
         {
-            ConcreteSubject subject = new ConcreteSubject();
+            Subject subject = new ConcreteSubject();
             subject.Attach(new ConcreteObserver(subject));
+           
             subject.SubjectState = 1;
+            subject.Notify();
         }
     }
 }

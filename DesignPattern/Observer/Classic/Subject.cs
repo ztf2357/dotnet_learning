@@ -8,6 +8,18 @@ namespace DesignPattern.Observer.Classic
 {
     public abstract class Subject
     {
+
+        private int _subjectState;
+        public int SubjectState
+        {
+            get { return _subjectState; }
+            set
+            {
+                _subjectState = value;
+            }
+        }
+
+
         private IList<Observer> _observers = new List<Observer>();
 
         public void Attach(Observer observer)
@@ -31,13 +43,6 @@ namespace DesignPattern.Observer.Classic
 
     public class ConcreteSubject : Subject
     {
-        private int _subjectState;
-        public int SubjectState {
-            get { return _subjectState; }
-            set {
-                _subjectState = value;
-                Notify();
-            }
-        }
+       
     }
 }
