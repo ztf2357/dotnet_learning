@@ -42,8 +42,11 @@
   <ItemGroup>
     <Compile Include="Observer\Classic\Observer.cs" />
     <Compile Include="Observer\Classic\Subject.cs" />
+    <Compile Include="Observer\IObservable\Observer.cs" />
+    <Compile Include="Observer\IObservable\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
